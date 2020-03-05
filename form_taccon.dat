@@ -483,7 +483,7 @@
           foreach pick in hero where "DashTacCon.Traits" sortas explicit
             @text = splice(@text,"{text clrtacinfo}","{br}")
             @text &= eachpick.field[trtAbbrev].text
-            @text &= ":{text clrreset} {b}" & eachpick.field[trtFinal].text & "{/b}"
+            @text &= ":{text clrreset} {b}" & eachpick.field[trtDisplay].text & "{/b}"
             nexteach
 
           ~squeeze the lines together a little bit
@@ -533,7 +533,7 @@
             ~format the value to be more prominent than the trait name
             @text = splice(@text,"{text clrtacinfo}","; ")
             @text &= name & ":{text clrreset} {b}"
-            @text &= eachpick.field[trtFinal].text & "{/b}"
+            @text &= eachpick.field[trtDisplay].text & "{/b}"
             nexteach
 
           ~shrink the default spacing between lines a tiny amount

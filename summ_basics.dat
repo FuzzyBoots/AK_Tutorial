@@ -61,7 +61,7 @@
       id="value"
       style="lblSummary">
       <label
-        field="trtFinal">
+        field="trtDisplay">
         </label>
       </portal>
 

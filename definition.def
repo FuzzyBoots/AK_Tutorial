@@ -160,6 +160,14 @@
     name="trkmax"
     param1="tracker"
     result="hero.child[#tracker].field[trkMax].value"/>
+  <scriptmacro 
+    name="traitroll" 
+    param1="trait" 
+    result="hero.childfound[#trait].field[trtRoll].value"/>
+  <scriptmacro 
+    name="traitprof" 
+    param1="trait" 
+    result="hero.childfound[#trait].field[trtNoStack].value"/>
 
   <!-- Decoration character used in summary panel headertitle scripts -->
   <scriptmacro

@@ -268,7 +268,7 @@
       style="lblLeft">
       <label>
         <labeltext><![CDATA[
-          @text = field[trtFinal].text
+          @text = field[trtDisplay].text
           ]]></labeltext>
         </label>
       <mouseinfo><![CDATA[

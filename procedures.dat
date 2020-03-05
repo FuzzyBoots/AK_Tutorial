@@ -629,7 +629,7 @@
     var roll as string
     foreach pick in hero where "DashTacCon.Rolls"
       if (eachpick.tagis[component.Skill] <> 0) then
-        roll = eachpick.field[sklRoll].text & "{text clrsecond}  (" & eachpick.field[trtFinal].text & " + " & eachpick.linkage[attribute].field[name].text & " " & eachpick.linkage[attribute].field[trtFinal].text & "){text clrreset}"
+        roll = eachpick.field[sklRoll].text & "{text clrsecond}  (" & eachpick.field[trtDisplay].text & " + " & eachpick.linkage[attribute].field[name].text & " " & eachpick.linkage[attribute].field[trtDisplay].text & "){text clrreset}"
       else
         roll = "????"
         endif
@@ -652,7 +652,7 @@
 
     ~output basic combat information
     foreach pick in hero where "DashTacCon.Combat" sortas explicit
-      info = eachpick.field[name].text & " {b}" & eachpick.field[trtFinal].text & "{/b}"
+      info = eachpick.field[name].text & " {b}" & eachpick.field[trtDisplay].text & "{/b}"
       final = splice(final,info,", ")
       nexteach
     final &= "{br}{br}"
@@ -716,13 +716,13 @@
 
     ~output our resistance traits
     foreach pick in hero where "User.Resistance"
-      final &= eachpick.field[name].text & ": {b}" & eachpick.field[trtFinal].text & "{/b}{br}"
+      final &= eachpick.field[name].text & ": {b}" & eachpick.field[trtDisplay].text & "{/b}{br}"
       nexteach
     final &= "{br}"
 
     ~output attributes
     foreach pick in hero from Attribute
-      final &= eachpick.field[name].text & ": {b}" & eachpick.field[trtFinal].text & "{/b}{br}"
+      final &= eachpick.field[name].text & ": {b}" & eachpick.field[trtDisplay].text & "{/b}{br}"
       nexteach
 
     ~output any permanent adjustments

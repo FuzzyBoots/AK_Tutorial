@@ -66,7 +66,7 @@
     foreach pick in hero where tagexpr sortas explicit
       node = xml[parentnode].addchild[nodename]
       xml[node].attr["name"] = eachpick.field[name].text
-      xml[node].attr["value"] = eachpick.field[trtFinal].text
+      xml[node].attr["value"] = eachpick.field[trtDisplay].text
       xodescript = eachpick.field[descript].text
       call xodescript
 
@@ -361,7 +361,7 @@
         foreach pick in hero from Derived sortas explicit
           node = xml[parentnode].addchild["trait"]
           xml[node].attr["name"] = eachpick.field[name].text
-          xml[node].attr["value"] = eachpick.field[trtFinal].text
+          xml[node].attr["value"] = eachpick.field[trtDisplay].text
           nexteach
 
         ~output weapons/attacks

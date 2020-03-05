@@ -39,6 +39,25 @@
       defvalue="10">
       </field>
 
+    <field
+      id="trtDisplay"
+      name="Net Roll to Display"
+      type="derived"
+      maxlength="50">
+      </field>
+
+    <field
+      id="trtRoll"
+      name="Roll Adjustment"
+      type="derived">
+      </field>
+
+    <field
+      id="trtNoStack"
+      name="Non-stacking Adjustment"
+      type="derived">
+      </field>
+
     <!-- User value assigned for the trait -->
     <field
       id="trtUser"
@@ -111,6 +130,41 @@
         endif
       ]]></eval>
 
+    <eval index="3" phase="Render" priority="5000" name="Calc trtDisplay">
+      <after name="Calc trtFinal"/><![CDATA[
+      ~if this is a derived trait, our display text is the final value
+      if (tagis[component.Derived] <> 0) then
+        field[trtDisplay].text = field[trtFinal].value
+        done
+        endif
+
+      ~bound our final value including in-play adjustments
+      var final as number
+      final = field[trtFinal].value
+      if (final < 2) then
+        final = 2
+      elseif (final > 6) then
+        final = 6
+        endif
+
+      ~convert the final value for the trait to the proper die type for display
+      var dietype as number
+      var display as string
+      dietype = final * 2
+      display = "d" & dietype
+      
+      ~if there are any bonuses or penalties on the roll, append those to the final result
+      var bonus as number
+      bonus = field[trtRoll].value + field[trtNoStack].value
+      if (bonus > 0) then
+        display &= "+" & bonus
+      elseif (bonus < 0) then
+        display &= bonus
+        endif
+
+      ~put the final result into the proper field
+      field[trtDisplay].text = display
+      ]]></eval>
     </component>
 
 
@@ -122,9 +176,12 @@
     name="Attribute"
     autocompset="no">
 
-    <!-- Attributes have a minimum trait value of 1 -->
+    <!-- Attributes have a minimum trait value of 2 and a maximum of 6 -->
     <eval index="1" phase="Initialize" priority="3000"><![CDATA[
-      field[trtMinimum].value = 1
+      ~since die types range from d4 to d12, in multiples of 2, we have a range of
+      ~2-6 for traits - we'll convert to the die type for display in a separate script
+      field[trtMinimum].value = 2
+      field[trtMaximum].value = 6
       ]]></eval>
 
     <!-- Each attribute point above one that is allocated by the user costs 7 CP -->

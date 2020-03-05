@@ -336,7 +336,7 @@
       id="total"
       style="outValBox">
       <output_label
-        field="trtFinal">
+        field="trtDisplay">
         </output_label>
       </portal>
 
@@ -665,7 +665,7 @@
       id="value"
       style="outValueLg">
       <output_label
-        field="trtFinal">
+        field="trtDisplay">
         </output_label>
       </portal>
 
