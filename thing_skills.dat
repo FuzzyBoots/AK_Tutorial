@@ -22,7 +22,7 @@
     -->
 
     <!-- Specify the attribute to which this skill is linked -->
-    <link linkage="attribute" thing="attrSam"/>
+    <link linkage="attribute" thing="attrAgi"/>
     </thing>
 
   <!-- Melee Skill
@@ -36,7 +36,7 @@
     isunique="yes"
     description="Description goes here">
     <fieldval field="trtAbbrev" value="Mel"/>
-    <link linkage="attribute" thing="attrSam"/>
+    <link linkage="attribute" thing="attrAgi"/>
     </thing>
 
   <!-- Shooting Skill
@@ -50,7 +50,7 @@
     isunique="yes"
     description="Description goes here">
     <fieldval field="trtAbbrev" value="Sht"/>
-    <link linkage="attribute" thing="attrSam"/>
+    <link linkage="attribute" thing="attrAgi"/>
     </thing>
 
 

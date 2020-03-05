@@ -19,18 +19,60 @@
     <tag group="explicit" tag="1"/>
     </thing>
 
-  <!-- Strength Attribute
-        NOTE! We include the Strength attribute because the minimum strength
-              requirement mechanisms for weapons and armor rely upon it.
-  -->
+  <!-- Agility Attribute -->
+  <thing
+    id="attrAgi"
+    name="Agility"
+    compset="Attribute"
+    isunique="yes"
+    description="Agility is your hero's nimbleness, quickness, and dexterity.">
+    <fieldval field="trtAbbrev" value="Agi"/>
+    <tag group="explicit" tag="1"/>
+    </thing>
+
+  <!-- Smarts Attribute -->
+  <thing
+    id="attrSma"
+    name="Smarts"
+    compset="Attribute"
+    isunique="yes"
+    description="Smarts is a measure of how well your character knows his world and culture, how well he thinks on his feet, and his mental agility.">
+    <fieldval field="trtAbbrev" value="Sma"/>
+    <tag group="explicit" tag="2"/>
+    </thing>
+
+  <!-- Spirit Attribute -->
+  <thing
+    id="attrSpi"
+    name="Spirit"
+    compset="Attribute"
+    isunique="yes"
+    description="Spirit reflects inner wisdom and willpower. Spirit is very important as it helps your character recover from being rattled when injured.">
+    <fieldval field="trtAbbrev" value="Spi"/>
+    <tag group="explicit" tag="3"/>
+    </thing>
+
+  <!-- Strength Attribute -->
   <thing
     id="attrStr"
     name="Strength"
     compset="Attribute"
     isunique="yes"
-    description="Description goes here">
+    description="Strength is raw physical power and general fitness. Strength is also used to generate your warrior's damage in hand-to-hand combat.">
     <fieldval field="trtAbbrev" value="Str"/>
-    <tag group="explicit" tag="2"/>
+    <tag group="explicit" tag="4"/>
+    </thing>
+
+  <!-- Vigor Attribute
+  -->
+  <thing
+    id="attrVig"
+    name="Vigor"
+    compset="Attribute"
+    isunique="yes"
+    description="Vigor represents endurance, resistance to disease, poison, or toxins, and how much pain and physical damage a hero can shake off.">
+    <fieldval field="trtAbbrev" value="Vig"/>
+    <tag group="explicit" tag="5"/>
     </thing>
 
   </document>
