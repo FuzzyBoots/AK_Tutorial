@@ -16,11 +16,13 @@
   -->
 
   <game
-    game="Example Game"
-    publisher="TBD"
-    website="http://www.domain.com/"
-    copyright="TBD"
-    legaloutput="TBD">
+    game="Savage Worlds"
+    publisher="Great White Games"
+    website="http://www.greatwhitegames.com/"
+    copyright="Copyright © 2004 by Great White Games. All rights reserved."
+    legaloutput="Copyright © 2004 by Great White Games. All rights reserved."
+    manualroot="savagemanual.htm"
+    editorroot="authoring\savageedit.htm">
     </game>
 
   <!-- The "author" element is where you'll provide details about yourself as the
@@ -28,9 +30,9 @@
   -->
 
   <author
-    author="TBD"
-    email="name@domain.com"
-    website="www.domain.com">
+    author="Lone wolf Development"
+    email="info@wolflair.com"
+    website="www.wolflair.com">
     </author>
 
   <!-- The "release" element specifies the details for each new revision of the data
@@ -40,13 +42,24 @@
   -->
 
   <release
-    major="0"
-    minor="2"
-    required="8.6"
-    summary="HLExport will use this text automatically"><![CDATA[{b}{text clrglow}Skeleton data files for Hero Lab{text clrreset}{/b}
+    major="1"
+    minor="0"
+    required="3.1"
+    summary="Core data files for Savage Worlds"><![CDATA[{b}{text ffff80}Savage Worlds data files for Hero Lab{text 010101}{/b}
 
-These data files provide a starting framework for implementing support for any game system of your choice. Adapt these data files as necessary. A detailed example is provided for adapting these files to the Savage Worlds game system.
-]]>
+  Welcome to the Savage Worlds data files for Hero Lab! For details on using Hero Lab, please refer to the Tutorial and/or User Manual documentation that will be found with Hero Lab under the Start menu. A separate manual with specifics for the Savage Worlds data files can be accessed via the "Help" menu and the "Configure Hero" form.
+
+  These data files represent a complete implementation of the Explorers Edition rules for the Savage Worlds RPG from Great White Games. You can create any type of character outlined in the rulebook using these data files. Many items have mouse-over information associated with them, so if you see an icon that isn't familiar, be sure to mouse over it for more information.
+
+  If you have questions or comments about Hero Lab, our public discussion forums can be found at the following URL: {u}~[(@http://support.wolflair.com/index.php?name=MDForum&file=index]http://support.wolflair.com/~[(#]{/u} There are separate forums for the product in general, each game system, and using the Authoring Kit. Please post your thoughts in the appropriate forum so that it is seen by the right people and responded to accordingly.
+
+  These data files are published under license from Great White Games.
+
+  Happy gaming!
+
+  {b}{text ffff80}Legal Information:{text 010101}{/b}
+  Copyright © 2008-2009 Great White Games. All rights reserved. Reproduction without the written permission of the publisher is expressly forbidden, except for the purposes of reviews.
+  ]]>
     </release>
 
   <!-- The "structure" element defines special structural details about the data files
